@@ -8,3 +8,7 @@ class Block:
 
     def __repr__(self):
         return f'Block - data: {self.data}'
+    
+
+block = Block('foo')
+print(block)

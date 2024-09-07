@@ -1,3 +1,5 @@
+from block import Block
+
 class Blockchain:
     """
     Blockchain: a public ledger of transactions.
