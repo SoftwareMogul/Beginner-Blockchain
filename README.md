@@ -24,3 +24,11 @@ python -m pytest backend/tests
 ```
 python -m backend.app
 ```
+
+**Run a peer instance**
+
+Make sure to activate the virtual environment.
+
+```
+export PEER=True && python -m backend.app
+```
