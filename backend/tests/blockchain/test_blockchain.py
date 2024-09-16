@@ -5,7 +5,6 @@ from backend.blockchain.block import GENESIS_DATA
 
 def test_blockchain_instance():
     blockchain = Blockchain()
-
     assert blockchain.chain[0].hash == GENESIS_DATA['hash']
 
 def test_add_block():
@@ -37,7 +36,7 @@ def test_replace_chain(blockchain_three_blocks):
 
     assert blockchain.chain == blockchain_three_blocks.chain
 
-def test_replace_chain_chain_not_longer(blockchain_three_blocks):
+def test_replace_chain_not_longer(blockchain_three_blocks):
     blockchain = Blockchain()
 
     with pytest.raises(Exception, match='The incoming chain must be longer'):

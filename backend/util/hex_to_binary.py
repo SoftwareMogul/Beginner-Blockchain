@@ -41,6 +41,5 @@ def main():
     hex_to_binary_crypto_hash = hex_to_binary(crypto_hash('test-data'))
     print(f'hex_to_binary_crypto_hash: {hex_to_binary_crypto_hash}')
 
-
 if __name__ == '__main__':
     main()
