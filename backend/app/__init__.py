@@ -26,7 +26,11 @@ def route_blockchain():
 
 @app.route('/blockchain/mine')
 def route_blockchain_mine():
-    transaction_data = 'stubbed_transaction_data'
+
+    transaction_values = transaction_pool.transaction_map.values()
+    transaction_data = list(
+        map(lambda transaction: transaction.to_json(), transaction_values)
+    )
 
     blockchain.add_block(transaction_data)
 
