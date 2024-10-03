@@ -24,3 +24,8 @@ class TransactionPool:
             lambda transaction: transaction.to_json(), 
             self.transaction_map.values()
         ))
+    
+    def clear_blockchain_transactions(self, blockchain):
+        """
+        Delete blockchain recorded transactions from the transaction pool.
+        """
