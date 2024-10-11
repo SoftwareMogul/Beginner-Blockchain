@@ -19,7 +19,6 @@ class Wallet:
     """
     def __init__(self):
         self.address = str(uuid.uuid4())[0:8]
-        self.balance = STARTING_BALANCE
         self.private_key = ec.generate_private_key(
             ec.SECP256K1(),
             default_backend()
