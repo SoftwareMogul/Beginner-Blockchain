@@ -2,6 +2,7 @@ import time
 import uuid
 
 from backend.wallet.wallet import Wallet
+from backend.config import MINING_REWARD, MINING_REWARD_INPUT
 
 class Transaction():
     """
