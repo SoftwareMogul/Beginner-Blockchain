@@ -98,6 +98,16 @@ class Transaction():
             transaction.input['signature']
         ):
             raise Exception('Invalid signature')
+
+    @staticmethod
+    def reward_transaction(miner_wallet):
+        """
+        Generate a reward transaction that awards the miner.
+        """
+        output = {}
+        output[miner_wallet.address] = MINING_REWARD
+
+        return Transaction(input=MINING_REWARD, output=output)
         
         
 def main():
