@@ -102,12 +102,12 @@ class Transaction():
     @staticmethod
     def reward_transaction(miner_wallet):
         """
-        Generate a reward transaction that awards the miner.
+        Generate a reward transaction that award the miner.
         """
         output = {}
         output[miner_wallet.address] = MINING_REWARD
 
-        return Transaction(input=MINING_REWARD, output=output)
+        return Transaction(input=MINING_REWARD_INPUT, output=output)
         
         
 def main():
